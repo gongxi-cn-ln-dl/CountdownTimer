@@ -19,7 +19,10 @@ function stopCountdown(){
 }
 
 function countdown(){
-    if(isEnd()) stopCountdown();
+    if(isEnd()){
+        stopCountdown();
+        return;
+    } 
     
     if(countdownSeconds.value === 0){
         if(countdownMinutes.value === 0){
