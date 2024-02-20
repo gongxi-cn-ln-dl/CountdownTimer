@@ -16,12 +16,13 @@ function isEnd(){
 function stopCountdown(){
     clearInterval(nIntervId);
     nIntervId = null
+    isrunning.value = false
 }
 
 function countdown(){
     if(isEnd()){
-        stopCountdown();
-        return;
+      stopCountdown();
+      return;
     } 
     
     if(countdownSeconds.value === 0){
